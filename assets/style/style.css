@@ -213,13 +213,13 @@ border-radius: 3px;
 .nav_bar {
 	display: flex;
 	flex-direction: row;
-	max-width: calc(550px + 420 * ((100vw - 320px) / (1280 - 320)));
+	max-width: calc(600px + 420 * ((100vw - 320px) / (1280 - 320)));
 	margin: 0 auto;
 	position: relative;
 	top: 0;
 	width: 100%;
 	justify-content: space-around;
-	margin-top: calc(22px + 16 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(27px + 16 * ((100vw - 320px) / (1280 - 320)));
 }
 .nav {
 	width: calc(50px + 50 * ((100vw - 320px) / (1280 - 320)));
@@ -253,7 +253,7 @@ line-height: 0;
 	padding: 30px 20px calc(12px + 12 * ((100vw - 320px) / (1280 - 320))) 20px;
 	position: relative;
 z-index: 110;
-	margin-top: calc(50px + 20 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(40px + 20 * ((100vw - 320px) / (1280 - 320)));
 	animation: rotate infinite 2.5s ease-in-out alternate;
 	transform-origin: left;
 	transform-origin: top right;
