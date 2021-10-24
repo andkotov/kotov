@@ -21,6 +21,26 @@ html, body {
 	 margin: 0 auto;
 	 line-height: calc(35px + 23 * ((100vw - 320px) / (1280 - 320)));
 }
+.nav_bar {
+	display: flex;
+	flex-direction: row;
+	max-width: calc(350px + 300 * ((100vw - 320px) / (1280 - 320)));
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+	width: 100%;
+	justify-content: space-around;
+	margin-top: calc(8px + 8 * ((100vw - 320px) / (1280 - 320)));
+}
+.nav {
+	width: calc(25px + 25 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(25px + 25 * ((100vw - 320px) / (1280 - 320)));
+	position: relative;
+}
+.nav_bar a {
+line-height: 0;	
+
+}
 .fullscreen_intro {
 	 min-height: 100vh;
 	 width: 100%;
@@ -44,10 +64,12 @@ html, body {
 	padding: 10px 10px calc(3px + 3 * ((100vw - 320px) / (1280 - 320))) 10px;
 	position: relative;
 z-index: 110;
-	margin-top: calc(70px + 10 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(10px + 15 * ((100vw - 320px) / (1280 - 320)));
 	animation: rotate infinite 2s ease-in-out alternate;
 	transform-origin: top right;
 	border-radius: 5px;
+	
+	overflow: hidden;
 }
 .intro_title ab {
 	-webkit-text-stroke: 2.5px black;
@@ -70,6 +92,7 @@ position: relative;
 border: 3px solid white;
 z-index: 100;
 border-radius: 3px;
+
 }
 .background {
 	background: black;
@@ -85,6 +108,7 @@ border-radius: 3px;
 	margin-top: calc(50px + 30 * ((100vw - 320px) / (1280 - 320)));
 	animation: wiggle infinite 4s ease-in-out alternate;
 	border-radius: 5px;
+	
 }
 .danger .x_1 {
 	position: absolute;
@@ -153,7 +177,7 @@ border-radius: 3px;
 	position: absolute;
 	width: 100%;
 	background: white;
-	top: calc(321px + 155 * ((100vw - 320px) / (1280 - 320)));
+	top: calc(266px + 155 * ((100vw - 320px) / (1280 - 320)));
 	height: 3px;
 	z-index: 555;
 }
@@ -186,6 +210,26 @@ border-radius: 3px;
 	 margin: 0 auto;
 	 line-height: calc(68px + 23 * ((100vw - 320px) / (1280 - 320)));
 }
+.nav_bar {
+	display: flex;
+	flex-direction: row;
+	max-width: calc(550px + 380 * ((100vw - 320px) / (1280 - 320)));
+	margin: 0 auto;
+	position: relative;
+	top: 0;
+	width: 100%;
+	justify-content: space-around;
+	margin-top: calc(20px + 16 * ((100vw - 320px) / (1280 - 320)));
+}
+.nav {
+	width: calc(50px + 50 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(50px + 50 * ((100vw - 320px) / (1280 - 320)));
+	position: relative;
+}
+.nav_bar a {
+line-height: 0;	
+
+}
 .fullscreen_intro {
 	 min-height: 100vh;
 	 width: 100%;
@@ -209,7 +253,7 @@ border-radius: 3px;
 	padding: 30px 20px calc(12px + 12 * ((100vw - 320px) / (1280 - 320))) 20px;
 	position: relative;
 z-index: 110;
-	margin-top: calc(140px + 20 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(65px + 20 * ((100vw - 320px) / (1280 - 320)));
 	animation: rotate infinite 2.5s ease-in-out alternate;
 	transform-origin: left;
 	transform-origin: top right;
@@ -319,9 +363,9 @@ border-radius: 4px;
 	position: absolute;
 	width: 100%;
 	background: white;
-	top: calc(621px + 295 * ((100vw - 320px) / (1280 - 320)));
+	top: calc(551px + 295 * ((100vw - 320px) / (1280 - 320)));
 	height: 6px;
-	z-index: 555;}
+	z-index: 555;
 }
 	@keyframes wiggle {
 	0% { transform: translatex(30px)}
@@ -340,8 +384,3 @@ border-radius: 4px;
 	100% { transform: scale(1)}
 }
 }
-
-
-
-
-
