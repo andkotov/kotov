@@ -213,7 +213,7 @@ border-radius: 3px;
 .nav_bar {
 	display: flex;
 	flex-direction: row;
-	max-width: calc(600px + 420 * ((100vw - 320px) / (1280 - 320)));
+	max-width: calc(600px + 500 * ((100vw - 320px) / (1280 - 320)));
 	margin: 0 auto;
 	position: relative;
 	top: 0;
