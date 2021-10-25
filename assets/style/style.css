@@ -459,7 +459,7 @@ border-radius: 4px;
   line-height: 1;
   border: 6px solid white;
   width: 400px;
-	font-size: calc(20px + 25 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(23px + 26 * ((100vw - 320px) / (1280 - 320)));
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
