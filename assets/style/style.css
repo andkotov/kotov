@@ -43,7 +43,7 @@ html, body {
   padding: 10px;
   border: 3px solid white;
   line-height: 1;
-  background: black;
+  background: #0000002b;
   border-radius: 3px;
   opacity: 0.4;
   -webkit-text-stroke: 0.5px black;
@@ -54,8 +54,8 @@ html, body {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: black;
-  color: #white;
+  background: #0000002b;
+  color: white;
   text-align: center;
   border-radius: 5px;
   padding: 5px;
@@ -86,9 +86,10 @@ html, body {
 	margin-top: calc(8px + 8 * ((100vw - 320px) / (1280 - 320)));
 }
 .nav {
-	width: calc(22px + 22 * ((100vw - 320px) / (1280 - 320)));
-	height: calc(22px + 22 * ((100vw - 320px) / (1280 - 320)));
+	width: calc(20px + 20 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(20px + 20 * ((100vw - 320px) / (1280 - 320)));
 	position: relative;
+	animation: pict_rotate infinite 16s ease-in-out alternate;
 }
 .nav_bar a {
 line-height: 0;	
@@ -137,7 +138,7 @@ z-index: 110;
 }
 .intro_title_upper {
 	font-size: calc(29px + 16 * ((100vw - 320px) / (1280 - 320)));
-background: black;
+background: #0000002b;
 color: white;
 padding: 10px;
 margin-top: -15px;
@@ -159,7 +160,7 @@ box-shadow: 0px 0px 20px black;
 	position: relative;
 	font-size: calc(22px + 13 * ((100vw - 320px) / (1280 - 320)));
 	padding: 10px;
-	margin-top: calc(50px + 30 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
 	animation: wiggle infinite 4s ease-in-out alternate;
 	border-radius: 5px;
 	box-shadow: 0px 0px 20px black;
@@ -182,22 +183,22 @@ box-shadow: 0px 0px 20px black;
 }
 .danger:before {
 	content: '';
-	top: calc(-80px - 40 * ((100vw - 320px) / (1280 - 320)));
+	bottom: 100%;
 	width: 3px;
 	background: white;
 	position: absolute;
 	display: inline-block;
-	height: calc(80px + 40 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
 	right: calc(20px + 10 * ((100vw - 320px) / (1280 - 320)));
 }
 .danger:after {
 	content: '';
-	top: calc(-80px - 40 * ((100vw - 320px) / (1280 - 320)));
+	bottom: 100%;
 	width: 3px;
 	background: white;
 	position: absolute;
 	display: inline-block;
-	height: calc(80px + 40 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
 	left: calc(20px + 10 * ((100vw - 320px) / (1280 - 320)));
 }
 .load_back {
@@ -206,7 +207,7 @@ box-shadow: 0px 0px 20px black;
 	padding: calc(5px + 5 * ((100vw - 320px) / (1280 - 320)));
 	border: 3px solid white;
 	overflow: visible;
-	background: black;
+	background: #0000002b;
 	position: relative;
 	z-index: 777;
 	box-shadow: 0px 0px 30px black;
@@ -220,8 +221,8 @@ box-shadow: 0px 0px 20px black;
 }
 .load .img {
 	padding: calc(10px + 5 * ((100vw - 320px) / (1280 - 320)));
-	width: calc(60px + 30 * ((100vw - 320px) / (1280 - 320)));
-	height: calc(60px + 30 * ((100vw - 320px) / (1280 - 320)));
+	width: calc(45px + 30 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(45px + 30 * ((100vw - 320px) / (1280 - 320)));
 	animation: rotate360 infinite 20s ease-in-out;
 	overflow: visible;
 	position: relative;
@@ -251,7 +252,19 @@ box-shadow: 0px 0px 20px black;
 		0% { transform: scale(1.0);}
 		100% { transform: scale(1.1);}	
 	}
-
+@keyframes pict_rotate {
+	0% { transform: rotate(0.0deg);}
+	10% { transform: rotate(1.5deg);}
+	20% { transform: rotate(0.0deg);}
+	30% { transform: rotate(-1.5deg);}
+	40% { transform: rotate(0.0deg);}
+	50% { transform: rotate(2.5deg);}
+	60% { transform: rotate(0.0deg);}
+	70% { transform: rotate(-3.5deg);}
+	80% { transform: rotate(2.0deg);}
+	90% { transform: rotate(1.0deg);}
+	100% { transform: rotate(0.0deg);}
+}
 @media screen and (max-device-width:480px){
 .page {
 	 display: flex;
@@ -338,7 +351,7 @@ z-index: 110;
 }
 .intro_title_upper {
 	font-size: calc(58px + 32 * ((100vw - 320px) / (1280 - 320)));
-background: black;
+background: #0000002b;
 color: white;
 padding: 20px;
 position: relative;
@@ -357,7 +370,7 @@ border-radius: 4px;
 	position: relative;
 	font-size: calc(44px + 26 * ((100vw - 320px) / (1280 - 320)));
 	padding: 20px;
-	margin-top: calc(100px + 60 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(80px + 50 * ((100vw - 320px) / (1280 - 320)));
 	animation: wiggle infinite 4s ease-in-out alternate;
 	border-radius: 8px;
 }
@@ -379,22 +392,22 @@ border-radius: 4px;
 }
 .danger:before {
 	content: '';
-	top: calc(-160px - 80 * ((100vw - 320px) / (1280 - 320)));
+	bottom: 100%;
 	width: 6px;
 	background: white;
 	position: absolute;
 	display: inline-block;
-	height: calc(160px + 80 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(80px + 50 * ((100vw - 320px) / (1280 - 320)));
 	right: calc(40px + 20 * ((100vw - 320px) / (1280 - 320)));
 }
 .danger:after {
 	content: '';
-	top: calc(-160px - 80 * ((100vw - 320px) / (1280 - 320)));
+	bottom: 100%;
 	width: 6px;
 	background: white;
 	position: absolute;
 	display: inline-block;
-	height: calc(160px + 80 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(80px + 50 * ((100vw - 320px) / (1280 - 320)));
 	left: calc(40px + 20 * ((100vw - 320px) / (1280 - 320)));
 }
 	.load_back {
@@ -404,7 +417,7 @@ border-radius: 4px;
 	padding: calc(10px + 10 * ((100vw - 320px) / (1280 - 320)));
 	border: 6px solid white;
 	overflow: visible;
-	background: black;
+	background: #0000002b;
 	position: relative;
 	z-index: 777;
 }
@@ -432,11 +445,11 @@ border-radius: 4px;
   padding: 10px;
   border: 6px solid white;
   line-height: 1;
-  background: black;
+  background: #0000002b;
   border-radius: 6px;
   opacity: 0.4;
   -webkit-text-stroke: 1px black;
-  font-size: calc(25px + 30 * ((100vw - 320px) / (1280 - 320)));
+  font-size: calc(24px + 29 * ((100vw - 320px) / (1280 - 320)));
   transition: 0.5s;
 }
 .tooltip:hover {
@@ -444,7 +457,7 @@ border-radius: 4px;
 }
 .tooltip .tooltiptext {
   visibility: hidden;
-  background-color: black;
+  background: #0000002b;
   color: #white;
   text-align: center;
   border-radius: 6px;
@@ -459,7 +472,7 @@ border-radius: 4px;
   line-height: 1;
   border: 6px solid white;
   width: 400px;
-	font-size: calc(23px + 26 * ((100vw - 320px) / (1280 - 320)));
+  font-size: calc(23px + 26 * ((100vw - 320px) / (1280 - 320)));
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
@@ -482,6 +495,5 @@ border-radius: 4px;
 	100% { transform: scale(1)}
 }
 }
-
 
 
