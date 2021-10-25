@@ -68,7 +68,7 @@ html, body {
   transition: opacity 0.3s;
   line-height: 1;
   border: 3px solid white;
-  width: 102px;
+  width: 180px;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
