@@ -11,18 +11,65 @@ html, body {
 	color: white;
 	font-size: 20px;
 	cursor: default;
-	overflow-x: hidden;
 }
 .page {
 	 display: flex;
 	 flex-direction: column;
 	 min-height: 100vh;
-	 overflow: hidden;
 	 margin: 0 auto;
-	 line-height: calc(35px + 23 * ((100vw - 320px) / (1280 - 320)));
+	 min-width: 1280px;
+	 line-height: calc(30px + 20 * ((100vw - 320px) / (1280 - 320)));
+}
+
+.fullscreen_intro .page_left, .page_right {
+	position: relative;
+	width: 35%;
+	vertical-align: center;
+	flex-direction: column;
+	display: flex;
+	margin: 15px;
+	line-height: calc(18px + 15 * ((100vw - 320px) / (1280 - 320)));
+}
+.page_telephone {
+	display: none;
+	position: relative;
+	width: 35%;
+	vertical-align: center;
+	flex-direction: column;
+	margin: 15px;
+	line-height: calc(18px + 15 * ((100vw - 320px) / (1280 - 320)));
+}
+.text_page {
+	font-size: calc(18px + 10 * ((100vw - 320px) / (1280 - 320)));
+	color: white;
+	padding: 20px 15px 20px 15px;
+	background: #00000057;
+	box-shadow: 0px 0px 20px black;
+	border: 3px solid white;
+	border-radius: 3px;
+	align-self: center;
+	z-index: 500;
+}
+.title_page, .title_page a {
+	text-align: left;
+	font-size: calc(22px + 12 * ((100vw - 320px) / (1280 - 320)));
+	font-weight: 600;
+	color: black;
+	margin: 10px 10px 0px 10px;
+	background: white;
+	align-self: start;
+	padding: 8px 10px 8px 10px;
+	z-index: 501;
+	box-shadow: 0px -2px 20px black;
+	border-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	position: relative;
+	top: 3px;
 }
 .background_page {
 	background: url(homa.jpg) center center;
+	z-index: 0;
 	position: fixed;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -30,31 +77,41 @@ html, body {
 	height: 110%;
 	width: 110%;
 	filter: grayscale(3);
-	opacity: 0.25;
+	opacity: 0.2;
 	overflow: hidden;
 	-webkit-background-size: cover;
 	animation: scale_back infinite 12s ease-in-out alternate;
 }
+.tooltip_button {
+	width: 30%;
+	justify-content: end;
+	display: flex;
+}
 .tooltip {
-  position: fixed;
+  position: relative;
   display: inline-block;
-  bottom: 20px;
-  right: 20px;
   padding: 10px;
   border: 3px solid white;
+  font-size: calc(10px + 7 * ((100vw - 320px) / (1280 - 320)));
   line-height: 1;
-  background: #0000002b;
+  background: #00000057;
   border-radius: 3px;
-  opacity: 0.4;
+  opacity: 0.5;
   -webkit-text-stroke: 0.5px black;
+  margin: calc(5px + 5 * ((100vw - 320px) / (1280 - 320)));
+  align-self: center;
+  transition: 0.4s;
+  box-shadow: 0px 0px 5px black;
+  z-index: 200;
 }
 .tooltip:hover {
-	opacity: 0.8;
+	opacity: 1;
 }
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  background: #0000002b;
+  background: #00000057;
+  font-size: calc(11px + 7 * ((100vw - 320px) / (1280 - 320)));
   color: white;
   text-align: center;
   border-radius: 5px;
@@ -63,27 +120,108 @@ html, body {
   z-index: 1;
   bottom: -10%;
   right: 120%;
-  margin-left: -60px;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.4s;
   line-height: 1;
   border: 3px solid white;
-  width: 180px;
+  width: calc(90px + 95 * ((100vw - 320px) / (1280 - 320)));
+  box-shadow: 0px 0px 5px black;
+  z-index: 200;
+}
+.tooltip .tooltiptext:before {
+	content: '';
+	position: absolute;
+	height: 3px;
+	background: white;
+	left: 100%;
+	top: 50%;
+	width: 9%;
+	z-index: 200;
 }
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
-.nav_bar {
+.bar {
+	width: 100%;
+	background: linear-gradient(#00000070, #00000036, #fff0);
+	display: flex;
+	opacity: 1;
+	z-index: 1;
+	vertical-align: center;
+}
+.gmail {
+	display: flex;
+	justify-content: start;
+	width: 30%;
+}
+.gmailtip {
+	text-align: left;
+	border: 3px solid white;
+	color: white;
+	font-size: calc(10px + 7 * ((100vw - 320px) / (1280 - 320)));
+	margin: calc(5px + 5 * ((100vw - 320px) / (1280 - 320)));
+	padding: 2px 10px;
+	background: #00000057;
+	position: relative;
+	border-radius: 3px;
+	-webkit-text-stroke: 0.5px black;
+	box-shadow: 0px 0px 5px black;
+	opacity: 0.5;
+	transition: 0.4s;
+}
+.gmailtip:hover {
+	opacity: 1;
+}
+.gmailtip:hover .gmailtext {
+	visibility: visible;
+	opacity: 1;
+}
+.gmailtip .gmailtext{
+	 visibility: hidden;
+  background: #00000057;
+  font-size: calc(13px + 8 * ((100vw - 320px) / (1280 - 320)));
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: -10%;
+  left: 105%;
+  margin-right: -60px;
+  opacity: 0;
+  transition: opacity 0.4s;
+  line-height: 1;
+  border: 3px solid white;
+  width: calc(85px + 85 * ((100vw - 320px) / (1280 - 320)));
+  box-shadow: 0px 0px 5px black;
+}
+.gmailtip .gmailtext:before {
+	content: '';
+	position: absolute;
+	height: 3px;
+	background: white;
+	right: 100%;
+	top: 50%;
+	width: 9%;
+	z-index: 200;
+}
+.nav_links {
 	display: flex;
 	flex-direction: row;
 	max-width: calc(200px + 250 * ((100vw - 320px) / (1280 - 320)));
+	position: relative;
+	justify-content: space-around;
+	margin: 0 auto;
+	margin-top: calc(5px + 5 * ((100vw - 320px) / (1280 - 320)));
+	margin-bottom: calc(5px + 5 * ((100vw - 320px) / (1280 - 320)));
+}
+.nav_bar {
+	justify-content: space-around;
+	width: 40%;
 	margin: 0 auto;
 	position: relative;
-	top: 0;
-	width: 100%;
-	justify-content: space-around;
-	margin-top: calc(8px + 8 * ((100vw - 320px) / (1280 - 320)));
 }
 .nav {
 	width: calc(25px + 30 * ((100vw - 320px) / (1280 - 320)));
@@ -91,29 +229,35 @@ html, body {
 	position: relative;
 	animation: pict_rotate infinite 16s ease-in-out alternate;
 	border-radius: 50%;
+	border: 0px solid white;
 	box-shadow: 0px 0px 5px #00000096;
+	transition: border 0.2s;
+}
+.nav:hover {
+	border: 3px solid white;
 }
 .nav_bar a {
 line-height: 0;	
 
 }
 .fullscreen_intro {
-	 min-height: 100vh;
 	 width: 100%;
 	 display: flex;
 	 vertical-align: center;
+	 flex-direction: row;
+	 position: relative;
 }
 .intro_body {
-     justify-content: center;
      display: flex;
-     width: 100%;
+     width: 30%;
      margin: 0px auto;
 	 flex-direction: column;
 	 align-items: center;
 	 position: relative;
+	 text-align: center;
 }
 .intro_title {
-	font-size: calc(37px + 23 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(29px + 27 * ((100vw - 320px) / (1280 - 320)));
 	background: white;
 	-webkit-text-stroke: 2px black;
 	color: white;
@@ -126,6 +270,10 @@ z-index: 110;
 	border-radius: 5px;
 	box-shadow: 0px 0px 5px black;
 	overflow: hidden;
+	transition: color 0.7s;
+}
+.intro_title:hover {
+	color: black;
 }
 .intro_title ab {
 	-webkit-text-stroke: 2.5px black;
@@ -139,17 +287,20 @@ z-index: 110;
 	right: 3px;
 }
 .intro_title_upper {
-	font-size: calc(29px + 16 * ((100vw - 320px) / (1280 - 320)));
+	font-size:  calc(19px + 20 * ((100vw - 320px) / (1280 - 320)));
 background: #0000002b;
 color: white;
-padding: 10px;
+padding: 10px 20px;
 margin-top: -15px;
 position: relative;
 border: 3px solid white;
 z-index: 100;
 border-radius: 3px;
 box-shadow: 0px 0px 20px black;
-
+transition: border 0.3s;
+}
+.intro_title_upper:hover {
+	border: 5px solid white;
 }
 .background {
 	background: black;
@@ -160,12 +311,15 @@ box-shadow: 0px 0px 20px black;
 	background: white;
 	color: black;
 	position: relative;
-	font-size: calc(22px + 13 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(20px + 11 * ((100vw - 320px) / (1280 - 320)));
 	padding: 10px;
 	margin-top: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
 	animation: wiggle infinite 4s ease-in-out alternate;
 	border-radius: 5px;
 	box-shadow: 0px 0px 20px black;
+	transition: 0.4s;
+}
+.danger:hover {
 }
 .danger .x_1 {
 	position: absolute;
@@ -230,6 +384,7 @@ box-shadow: 0px 0px 20px black;
 	position: relative;
 	z-index: 777;
 }
+
 @keyframes rotate360 {
 	0% { transform: rotate(0deg)}
 	100% { transform: rotate(3600deg)}
@@ -272,9 +427,59 @@ box-shadow: 0px 0px 20px black;
 	 display: flex;
 	 flex-direction: column;
 	 min-height: 100vh;
-	 overflow: hidden;
 	 margin: 0 auto;
 	 line-height: calc(68px + 23 * ((100vw - 320px) / (1280 - 320)));
+}
+.fullscreen_intro .page_left {
+	display: none;
+}
+.fullscreen_intro .page_right {
+	position: relative;
+	width: 96%;
+	vertical-align: center;
+	flex-direction: column;
+	display: flex;
+	margin: 0 auto;
+	line-height: calc(50px + 20 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(60px + 60 * ((100vw - 320px) / (1280 - 320)));
+}
+.fullscreen_intro .page_telephone {
+	position: relative;
+	width: 96%;
+	vertical-align: center;
+	flex-direction: column;
+	display: flex;
+	margin: 0 auto;
+	line-height: calc(50px + 20 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(70px + 70 * ((100vw - 320px) / (1280 - 320)));
+}
+.text_page {
+	font-size: calc(44px + 23 * ((100vw - 320px) / (1280 - 320)));
+	color: white;
+	padding: 30px 25px 30px 25px;
+	background: #00000057;
+	box-shadow: 0px 0px 20px black;
+	border: 6px solid white;
+	border-radius: 5px;
+	align-self: center;
+	z-index: 500;
+}
+.title_page, .title_page a {
+	text-align: left;
+	font-size: calc(65px + 35 * ((100vw - 320px) / (1280 - 320)));
+	font-weight: 600;
+	color: black;
+	margin: 15px 15px 0px 25px;
+	background: white;
+	align-self: start;
+	padding: 16px 20px 16px 20px;
+	z-index: 501;
+	box-shadow: 0px -5px 20px black;
+	border-radius: 5px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	position: relative;
+	top: 3px;
 }
 .background_page {
 	background: url(me.jpg) center center;
@@ -291,34 +496,51 @@ box-shadow: 0px 0px 20px black;
 	animation: scale_back infinite 16s ease-in-out alternate;
 }
 .nav_bar {
-	display: flex;
-	flex-direction: row;
-	max-width: calc(550px + 380 * ((100vw - 320px) / (1280 - 320)));
+	display: ;
+	flex-direction: ;
+	max-width: ;
+	margin: ;
+	position: ;
+	top: ;
+	width: 100%;
+	justify-content: ;
+	margin-top: ;
+}
+.nav_links {
+	justify-content: space-around;
+	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	top: 0;
-	width: 100%;
-	justify-content: space-around;
-	margin-top: calc(12px + 15 * ((100vw - 320px) / (1280 - 320)));
+	flex-direction: row;
+	margin-top: calc(23px + 23 * ((100vw - 320px) / (1280 - 320)));
+	max-width: calc(600px + 650 * ((100vw - 320px) / (1280 - 320)));
 }
 .nav {
-	width: calc(70px + 52 * ((100vw - 320px) / (1280 - 320)));
-	height: calc(70px + 52 * ((100vw - 320px) / (1280 - 320)));
+	width: calc(90px + 55 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(90px + 55 * ((100vw - 320px) / (1280 - 320)));
 	position: relative;
 	box-shadow: 0px 0px 7px #00000096;
 }
+.nav:hover {
+	border: 3px solid white;
+}
+.gmail {
+	display: none;
+}
 .nav_bar a {
 line-height: 0;	
-
+}
+.tooltip_button {
+	display: none;
 }
 .fullscreen_intro {
 	 min-height: 100vh;
 	 width: 100%;
 	 display: flex;
 	 vertical-align: center;
+	 flex-direction: column;
 }
 .intro_body {
-     justify-content: center;
      display: flex;
      width: 100%;
      margin: 0px auto;
@@ -327,19 +549,24 @@ line-height: 0;
 	 position: relative;
 }
 .intro_title {
-	font-size: calc(74px + 46 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(100px + 50 * ((100vw - 320px) / (1280 - 320)));
 	background: white;
 	color: white;
 	-webkit-text-stroke: 2.7px black;
 	padding: 30px 20px calc(12px + 12 * ((100vw - 320px) / (1280 - 320))) 20px;
 	position: relative;
 z-index: 110;
-	margin-top: calc(15px + 15 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(50px + 25 * ((100vw - 320px) / (1280 - 320)));
 	animation: rotate infinite 2.5s ease-in-out alternate;
 	transform-origin: left;
 	transform-origin: top right;
 	border-radius: 8px;
 	overflow: hidden;
+	transition: color 0.7s;
+	line-height: calc(88px + 23 * ((100vw - 320px) / (1280 - 320)));
+}
+.intro_title:hover {
+	color: black;
 }
 .intro_title ab {
 	-webkit-text-stroke: 3.5px black;
@@ -353,7 +580,7 @@ z-index: 110;
 	right: 5px;
 }
 .intro_title_upper {
-	font-size: calc(58px + 32 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(75px + 40 * ((100vw - 320px) / (1280 - 320)));
 background: #0000002b;
 color: white;
 padding: 20px;
@@ -361,6 +588,7 @@ position: relative;
 border: 6px solid white;
 z-index: 100;
 border-radius: 4px;
+line-height: calc(88px + 23 * ((100vw - 320px) / (1280 - 320)));
 }
 .background {
 	background: black;
@@ -372,11 +600,12 @@ border-radius: 4px;
 	color: black;
 	text-align: center;
 	position: relative;
-	font-size: calc(42px + 25 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(60px + 30 * ((100vw - 320px) / (1280 - 320)));
 	padding: 20px;
 	margin-top: calc(80px + 50 * ((100vw - 320px) / (1280 - 320)));
 	animation: wiggle infinite 4s ease-in-out alternate;
 	border-radius: 8px;
+	line-height: calc(88px + 23 * ((100vw - 320px) / (1280 - 320)));
 }
 .danger .x_1 {
 	position: absolute;
@@ -415,10 +644,10 @@ border-radius: 4px;
 	left: calc(40px + 20 * ((100vw - 320px) / (1280 - 320)));
 }
 	.load_back {
-	margin-top: calc(40px + 40 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(60px + 60 * ((100vw - 320px) / (1280 - 320)));
 	border-radius: 50%;
 	line-height: 0;
-	padding: calc(10px + 10 * ((100vw - 320px) / (1280 - 320)));
+	padding: calc(12px + 12 * ((100vw - 320px) / (1280 - 320)));
 	border: 6px solid white;
 	overflow: visible;
 	background: #0000002b;
@@ -433,9 +662,9 @@ border-radius: 4px;
 	z-index: 444;
 }
 .load .img {
-	padding: calc(13px + 10 * ((100vw - 320px) / (1280 - 320)));
-	width: calc(100px + 50 * ((100vw - 320px) / (1280 - 320)));
-	height: calc(100px + 50 * ((100vw - 320px) / (1280 - 320)));
+	padding: calc(12px + 12 * ((100vw - 320px) / (1280 - 320)));
+	width: calc(100px + 60 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(100px + 60 * ((100vw - 320px) / (1280 - 320)));
 	animation: rotate360 infinite 20s ease-in-out;
 	overflow: visible;
 	position: relative;
@@ -482,6 +711,13 @@ border-radius: 4px;
   visibility: visible;
   opacity: 1;
 }
+.page_second {
+	min-height: 100vh;
+	width: 100%;
+	overflow: visible;
+	position: relative;
+	z-index: 988;
+}
 	@keyframes wiggle {
 	0% { transform: translatex(30px)}
 	100% { transform: translatex(-30px)}
@@ -499,8 +735,6 @@ border-radius: 4px;
 	100% { transform: scale(1)}
 }
 }
-
-
 
 
 
