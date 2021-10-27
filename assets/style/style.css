@@ -844,7 +844,7 @@ line-height: calc(88px + 23 * ((100vw - 320px) / (1280 - 320)));
 	position: absolute
 }
 .imgplace .img {
-	width: 75%;
+	width: 85%;
 	transition: 0.7s;
 	height: 90%;
 	object-fit: cover;
@@ -867,11 +867,11 @@ line-height: calc(88px + 23 * ((100vw - 320px) / (1280 - 320)));
 	font-size:  calc(37px + 32 * ((100vw - 320px) / (1280 - 320)));
 	color: black;
 	background: white;
-	width: 93%;
+	width: 85%;
 	opacity: 1;
 	border-radius: 8px;
 	box-shadow: 0px 0px 25px black;
-	line-height: calc(54px + 22 * ((100vw - 320px) / (1280 - 320)));
+	line-height: calc(58px + 25 * ((100vw - 320px) / (1280 - 320)));
 }
  .imgtitle {
 	position: absolute;
@@ -880,12 +880,12 @@ line-height: calc(88px + 23 * ((100vw - 320px) / (1280 - 320)));
 	font-size:  calc(35px + 30 * ((100vw - 320px) / (1280 - 320)));
 	color: black;
 	background: white;
-	width: 75%;
+	width: 85%;
 	opacity: 0.7;
 	transition: 0.7s;
 	border-radius: 8px;
 	box-shadow: 0px 0px 20px black;
-	line-height: calc(50px + 20 * ((100vw - 320px) / (1280 - 320)));
+	line-height: calc(58px + 25 * ((100vw - 320px) / (1280 - 320)));
 }
 	@keyframes wiggle {
 	0% { transform: translatex(30px)}
