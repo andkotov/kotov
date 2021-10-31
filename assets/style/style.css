@@ -24,19 +24,19 @@ html, body {
 .fullscreen_intro .page_left {
 	position: relative;
 	width: 35%;
+	margin: calc(20px + 30 * ((100vw - 320px) / (1280 - 320))) 15px 0px 15px;
 	vertical-align: center;
 	flex-direction: column;
 	display: flex;
-	margin: 15px;
 	line-height: calc(18px + 15 * ((100vw - 320px) / (1280 - 320)));
 }
 .fullscreen_intro .page_right {
 	position: relative;
 	width: 35%;
+	margin: calc(20px + 30 * ((100vw - 320px) / (1280 - 320))) 15px 0px 15px;
 	vertical-align: center;
 	flex-direction: column;
 	display: flex;
-	margin: 15px;
 	line-height: calc(18px + 15 * ((100vw - 320px) / (1280 - 320)));
 }
 .page_right .title_page {
@@ -51,6 +51,9 @@ html, body {
 	margin: 15px;
 	line-height: calc(18px + 15 * ((100vw - 320px) / (1280 - 320)));
 }
+.page_telephone {
+	
+}
 .text_page {
 	font-size: calc(18px + 10 * ((100vw - 320px) / (1280 - 320)));
 	color: white;
@@ -61,13 +64,24 @@ html, body {
 	border-radius: 3px;
 	align-self: center;
 	z-index: 500;
+	display: flex;
+	flex-direction: column;
+}
+.text_line {
+	position: relative;
+	width: 90%;
+	align-self: center;
+	height: 1px;
+	background: #ffffff4f;
+	margin-top: calc(7px + 7 * ((100vw - 320px) / (1280 - 320))) ;
+	margin-bottom: calc(5px + 5 * ((100vw - 320px) / (1280 - 320))) ;
 }
 .title_page, .title_page a {
 	text-align: left;
 	font-size: calc(22px + 12 * ((100vw - 320px) / (1280 - 320)));
 	color: black;
 	font-weight: 600;
-	margin: 10px 10px 0px 10px;
+	margin: calc(15px + 20 * ((100vw - 320px) / (1280 - 320))) 10px 0px 10px;
 	background: white;
 	align-self: start;
 	padding: 8px 10px 8px 10px;
@@ -79,6 +93,8 @@ html, body {
 	position: relative;
 	top: 3px;
 	letter-spacing: -1px;
+	text-shadow: 1px 1px 2px #c1c1c1;
+
 }
 .imgplace {
 	display: flex;
@@ -143,6 +159,7 @@ html, body {
 }
  .imgtitle {
 	position: absolute;
+	text-shadow: 0px 0px 2px #c1c1c1, 1px 1px 2px #ccc;
 	bottom: -8%;
 	text-align: center;
 	font-size:  calc(17px + 9 * ((100vw - 320px) / (1280 - 320)));
@@ -156,7 +173,7 @@ html, body {
 	line-height: calc(19px + 19 * ((100vw - 320px) / (1280 - 320)));
 }
 .background_page {
-	background: url(homa.jpg) center center;
+	background: url(back17.jpg) center center;
 	z-index: 0;
 	position: fixed;
 	background-size: cover;
@@ -346,9 +363,8 @@ line-height: 0;
 	 text-align: center;
 }
 .intro_title {
-	font-size: calc(29px + 27 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(27px + 25 * ((100vw - 320px) / (1280 - 320)));
 	background: white;
-	-webkit-text-stroke: 1px white;
 	color: black;
 	padding: 10px 10px calc(3px + 3 * ((100vw - 320px) / (1280 - 320))) 10px;
 	position: relative;
@@ -361,12 +377,14 @@ z-index: 110;
 	transition: color 0.7s;
 	letter-spacing: -1px;
 	overflow: hidden;
+	text-shadow: 0px 0px 2px #c1c1c1, 1px 1px 2px #ccc;
+	letter-spacing: -2px;
 }
 .intro_title:hover {
 	color: black;
 }
 .intro_title ab {
-	font-size: calc(35px + 30 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(33px + 29 * ((100vw - 320px) / (1280 - 320)));
 	
 }
 .x {
@@ -376,6 +394,8 @@ z-index: 110;
 	display: block;
 	top: 3px;
 	right: 3px;
+	box-shadow: 0px 0px 2px #8a8a8a;
+	border-radius: 50%;
 }
 .intro_title_upper {
 	font-size:  calc(19px + 20 * ((100vw - 320px) / (1280 - 320)));
@@ -404,11 +424,12 @@ transition: border 0.3s;
 	position: relative;
 	font-size: calc(20px + 11 * ((100vw - 320px) / (1280 - 320)));
 	padding: 10px;
-	margin-top: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
+	margin-top: calc(20px + 20 * ((100vw - 320px) / (1280 - 320)));
 	animation: wiggle infinite 4s ease-in-out alternate;
 	border-radius: 5px;
 	box-shadow: 0px 0px 20px black;
 	transition: 0.4s;
+	text-shadow: 0px 0px 1px #666, 0px 0px 1px gray;
 }
 .danger:hover {
 	-webkit-animation-play-state: paused;
@@ -439,7 +460,7 @@ transition: border 0.3s;
 	background: white;
 	position: absolute;
 	display: inline-block;
-	height: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(20px + 20 * ((100vw - 320px) / (1280 - 320)));
 	right: calc(20px + 10 * ((100vw - 320px) / (1280 - 320)));
 }
 .danger:after {
@@ -449,7 +470,7 @@ transition: border 0.3s;
 	background: white;
 	position: absolute;
 	display: inline-block;
-	height: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
+	height: calc(20px + 20 * ((100vw - 320px) / (1280 - 320)));
 	left: calc(20px + 10 * ((100vw - 320px) / (1280 - 320)));
 }
 .load_back {
@@ -497,6 +518,7 @@ transition: border 0.3s;
 p { 
 text-indent: calc(8px + 8 * ((100vw - 320px) / (1280 - 320)));
 }
+
 h3 {
   margin: 0;
   display: flex;
@@ -520,12 +542,12 @@ em.o {
   position: relative;
 }
 em.o.left {
-  -webkit-transform-origin: calc(20px + 12 * ((100vw - 320px) / (1280 - 320)));
-  transform-origin: calc(20px + 12 * ((100vw - 320px) / (1280 - 320)));
+  -webkit-transform-origin: calc(20px + 10 * ((100vw - 320px) / (1280 - 320)));
+  transform-origin: calc(20px + 10 * ((100vw - 320px) / (1280 - 320)));
 }
 em.o.right {
-  -webkit-transform-origin: calc(-30px + 15 * ((100vw - 320px) / (1280 - 320)));
-  transform-origin: calc(-30px + 15 * ((100vw - 320px) / (1280 - 320)));
+  -webkit-transform-origin: calc(-30px + 30 * ((100vw - 320px) / (1280 - 320)));
+  transform-origin: calc(-30px + 30 * ((100vw - 320px) / (1280 - 320)));
 }
 @-webkit-keyframes planet-rotate {
   0% {-webkit-transform: rotate(0deg);}
@@ -559,7 +581,7 @@ em.o.right {
 }
 	@keyframes scale_back {
 		0% { transform: scale(1.0);}
-		100% { transform: scale(1.1);}	
+		100% { transform: scale(1.03);}	
 	}
 @keyframes pict_rotate {
 	0% { transform: rotate(0.0deg);}
@@ -596,8 +618,7 @@ em.o.right {
 	flex-direction: column;
 	display: flex;
 	margin: 0 auto;
-	line-height: calc(50px + 20 * ((100vw - 320px) / (1280 - 320)));
-	margin-top: calc(60px + 60 * ((100vw - 320px) / (1280 - 320)));
+	line-height: calc(55px + 25 * ((100vw - 320px) / (1280 - 320)));
 }
 .fullscreen_intro .page_telephone {
 	position: relative;
@@ -606,13 +627,12 @@ em.o.right {
 	flex-direction: column;
 	display: flex;
 	margin: 0 auto;
-	line-height: calc(50px + 20 * ((100vw - 320px) / (1280 - 320)));
-	margin-top: calc(70px + 70 * ((100vw - 320px) / (1280 - 320)));
+	line-height: calc(55px + 25 * ((100vw - 320px) / (1280 - 320)));
 }
 .text_page {
-	font-size: calc(44px + 23 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(47px + 25 * ((100vw - 320px) / (1280 - 320)));
 	color: white;
-	padding: 30px 25px 30px 25px;
+	padding: 35px 25px 35px 25px;
 	background: #00000057;
 	box-shadow: 0px 0px 20px black;
 	border: 6px solid white;
@@ -620,9 +640,18 @@ em.o.right {
 	align-self: center;
 	z-index: 500;
 }
+.text_line {
+	position: relative;
+	width: 90%;
+	align-self: center;
+	height: 3px;
+	background: #ffffff4f;
+	margin-top: calc(19px + 19 * ((100vw - 320px) / (1280 - 320))) ;
+	margin-bottom: calc(14px + 14 * ((100vw - 320px) / (1280 - 320))) ;
+}
 .title_page, .title_page a {
 	text-align: left;
-	font-size: calc(65px + 35 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(60px + 35 * ((100vw - 320px) / (1280 - 320)));
 	font-weight: 600;
 	color: black;
 	margin: 15px 15px 0px 25px;
@@ -636,6 +665,8 @@ em.o.right {
 	border-bottom-right-radius: 0px;
 	position: relative;
 	top: 3px;
+	overflow: hidden;
+	margin-top: calc(60px + 60 * ((100vw - 320px) / (1280 - 320)));
 }
 .background_page {
 	background: url(me.jpg) center center;
@@ -966,6 +997,7 @@ line-height: calc(88px + 23 * ((100vw - 320px) / (1280 - 320)));
 }
 p { 
 text-indent: calc(16px + 16 * ((100vw - 320px) / (1280 - 320)));
+
 }
 h3 {
   margin: 0;
@@ -990,12 +1022,12 @@ em.o {
   position: relative;
 }
 em.o.left {
-  -webkit-transform-origin: calc(40px + 24 * ((100vw - 320px) / (1280 - 320)));
-  transform-origin: calc(40px + 24 * ((100vw - 320px) / (1280 - 320)));
+  -webkit-transform-origin: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
+  transform-origin: calc(35px + 25 * ((100vw - 320px) / (1280 - 320)));
 }
 em.o.right {
-  -webkit-transform-origin: calc(-60px + 30 * ((100vw - 320px) / (1280 - 320)));
-  transform-origin: calc(-60px + 30 * ((100vw - 320px) / (1280 - 320)));
+  -webkit-transform-origin: calc(-30px + 20 * ((100vw - 320px) / (1280 - 320)));
+  transform-origin: calc(-30px + 20 * ((100vw - 320px) / (1280 - 320)));
 }
 	@keyframes wiggle {
 	0% { transform: translatex(30px)}
@@ -1015,6 +1047,7 @@ em.o.right {
 }
 
 }
+
 
 
 
