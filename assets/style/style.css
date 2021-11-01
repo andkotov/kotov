@@ -1221,9 +1221,9 @@ color: white;
 .achievement_number {
 	background: white;
 	color: black;
-	font-size: calc(57px + 30 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(58px + 31 * ((100vw - 320px) / (1280 - 320)));
 	align-self: center;
-	padding: 23px 29px;
+	padding: 24px 30px;
 	position: relative;
 }
 p { 
