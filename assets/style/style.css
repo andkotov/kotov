@@ -1223,7 +1223,7 @@ color: white;
 	color: black;
 	font-size: calc(57px + 30 * ((100vw - 320px) / (1280 - 320)));
 	align-self: center;
-	padding: 22px 28px;
+	padding: 23px 29px;
 	position: relative;
 }
 p { 
