@@ -1217,6 +1217,7 @@ z-index: 300;
 color: white;
  background: #0000002b;
  padding: 19px 25px;
+	display: inline-block;
 }
 .achievement_number {
 	background: white;
@@ -1225,6 +1226,7 @@ color: white;
 	align-self: center;
 	padding: 24px 30px;
 	position: relative;
+	display: inline-block;
 }
 p { 
 text-indent: calc(16px + 16 * ((100vw - 320px) / (1280 - 320)));
