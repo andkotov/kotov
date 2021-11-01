@@ -1213,10 +1213,10 @@ z-index: 300;
 	z-index: 169;
 }
 .achievement_name {
-	font-size: calc(57px + 30 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(56px + 30 * ((100vw - 320px) / (1280 - 320)));
 color: white;
  background: #0000002b;
- padding: 20px 26px;
+ padding: 19px 25px;
 }
 .achievement_number {
 	background: white;
