@@ -913,7 +913,7 @@ line-height: calc(88px + 23 * ((100vw - 320px) / (1280 - 320)));
 	color: black;
 	text-align: center;
 	position: relative;
-	font-size: calc(52px + 25 * ((100vw - 320px) / (1280 - 320)));
+	font-size: calc(51px + 24 * ((100vw - 320px) / (1280 - 320)));
 	padding: 20px;
 	margin-top: calc(70px + 30 * ((100vw - 320px) / (1280 - 320)));
 	animation: wiggle infinite 4s ease-in-out alternate;
