@@ -1227,6 +1227,7 @@ color: white;
 	padding: 24px 30px;
 	position: relative;
 	display: inline-block;
+	margin: -2px;
 }
 p { 
 text-indent: calc(16px + 16 * ((100vw - 320px) / (1280 - 320)));
