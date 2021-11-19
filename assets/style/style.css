@@ -12,6 +12,7 @@ html, body {
 	font-size: 20px;
 	cursor: default;
 }
+
 .page {
 	 display: flex;
 	 flex-direction: column;
@@ -96,10 +97,8 @@ position: absolute;
 	z-index: 501;
 	box-shadow: 0px -2px 20px black;
 	border-radius: 5px;
-	border-bottom-left-radius: 0px;
-	border-bottom-right-radius: 0px;
+	margin-bottom: -8px;
 	position: relative;
-	top: 3px;
 	line-height: 1.3em;
 	letter-spacing: -1px;
 	text-transform: uppercase;
@@ -226,38 +225,44 @@ clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 76%, 0 72%, 0 69%, 1% 67%
 .tooltip {
   position: relative;
   display: inline-block;
-  padding: 10px;
+  padding: 12px 10px;
   border: 3px solid white;
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1;
-  background: #000000b3;
+  background: black;
   border-radius: 3px;
   opacity: 0.5;
-  -webkit-text-stroke: 0.5px black;
-  margin: calc(5px + 5 * ((100vw - 320px) / (1280 - 320)));
+  font-weight: lighter;
+  margin: calc(6px + 6 * ((100vw - 320px) / (1280 - 320)));
   align-self: center;
   transition: 0.4s;
   box-shadow: 0px 0px 5px black;
+  letter-spacing: 2px;
   z-index: 200;
 }
 .tooltip:hover {
 	opacity: 1;
+	border: 3px solid white;
+	background: white;
+	color: black;
 }
 
-.tooltip .tooltiptext {
+.tooltiptext {
   visibility: hidden;
   background: #000000b3;
   font-size: 1em;
   color: white;
   text-align: center;
   border-radius: 5px;
+  letter-spacing: 0px;
   padding: 5px;
   position: absolute;
   z-index: 1;
   bottom: -10%;
   right: 120%;
   opacity: 0;
-  transition: opacity 0.4s;
+  transition: 0.4s;
+  font-weight: normal;
   line-height: 1;
   border: 3px solid white;
   width: calc(90px + 95 * ((100vw - 320px) / (1280 - 320)));
@@ -271,7 +276,7 @@ clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 76%, 0 72%, 0 69%, 1% 67%
 	background: white;
 	left: 100%;
 	top: 50%;
-	width: 9%;
+	width: 10%;
 	z-index: 200;
 }
 .tooltip:hover .tooltiptext {
@@ -279,13 +284,15 @@ clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 76%, 0 72%, 0 69%, 1% 67%
   opacity: 1;
 }
 .bar {
-	width: 100%;
 	background: linear-gradient(#00000070, #00000036, #fff0);
+}
+.bar_content {
+	max-width: 1370px;
+	width: 100%;
 	display: flex;
 	opacity: 1;
 	z-index: 1;
 	vertical-align: center;
-	max-width: 1370px;
 	margin: 0 auto;
 }
 .gmail {
@@ -298,52 +305,22 @@ clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 76%, 0 72%, 0 69%, 1% 67%
 	border: 3px solid white;
 	color: white;
 	font-size: 0.9em;
-	margin: calc(3px + 3 * ((100vw - 320px) / (1280 - 320)));
-	padding: 2px 10px;
-	background: #000000b3;
+	margin: calc(6px + 6 * ((100vw - 320px) / (1280 - 320)));
+	background: black;
 	position: relative;
 	border-radius: 3px;
-	-webkit-text-stroke: 0.5px black;
-	box-shadow: 0px 0px 5px black;
+	letter-spacing: 2px;
+	font-weight: lighter;
+	align-self: start;
 	opacity: 0.5;
 	transition: 0.4s;
+	padding: 12px 10px;
+	line-height: 1;
 }
 .gmailtip:hover {
 	opacity: 1;
-}
-.gmailtip:hover .gmailtext {
-	visibility: visible;
-	opacity: 1;
-}
-.gmailtip .gmailtext{
-	 visibility: hidden;
-  background: #000000b3;
-  font-size: 1em;
-  color: white;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px;
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: 105%;
-  margin-right: -60px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  line-height: 1;
-  border: 3px solid white;
-  width: calc(85px + 85 * ((100vw - 320px) / (1280 - 320)));
-  box-shadow: 0px 0px 5px black;
-}
-.gmailtip .gmailtext:before {
-	content: '';
-	position: absolute;
-	height: 3px;
+	color: black;
 	background: white;
-	right: 100%;
-	top: 50%;
-	width: 9%;
-	z-index: 200;
 }
 .nav_links_circle {
 	border-radius: 50%;
@@ -354,6 +331,10 @@ clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 76%, 0 72%, 0 69%, 1% 67%
 	box-shadow: 0px 0px 10px black;
 	position: relative;
 	transition: 0.4s;
+}
+.nav_links_circle:hover {
+	transform-origin: center center;
+	transform: scale(1.15);
 }
 .nav_links_line {
 	position: absolute;
@@ -562,7 +543,7 @@ transition: border 0.3s;
 }
 .logo {
 	background: #000000b3;
-	border: 2px solid white;
+	border: 3px solid white;
 	overflow: hidden;
 	border-radius: 3px;
 	box-shadow: 0px 0px 20px black;
@@ -898,10 +879,8 @@ margin: 5px 30px 5px 0px;
 	   z-index: 501;
 	   box-shadow: 0px -5px 40px black;
 	   border-radius: 10px;
-	   border-bottom-left-radius: 0px;
-	   border-bottom-right-radius: 0px;
 	   position: relative;
-	   top: 6px;
+	   margin-bottom: -25px;
 	   overflow: hidden;
 	   margin-top: calc(60px + 60 * ((100vw - 320px) / (1280 - 320)));
    }
@@ -943,6 +922,24 @@ margin: 5px 30px 5px 0px;
 	position: relative;
 	transition: 0.4s;
 }
+.nav_links .a {
+	animation: pict_rotate infinite 16s ease-in-out alternate;
+}
+.nav_links .a:nth-child(1) {
+	animation-delay: 1s;
+}
+.nav_links .a:nth-child(2) {
+	animation-delay: 1.2s;
+}
+.nav_links .a:nth-child(3) {
+	animation-delay: 1.4s;
+}
+.nav_links .a:nth-child(4) {
+	animation-delay: 1.6s;
+}
+.nav_links .a:nth-child(5) {
+	animation-delay: 1.8s;
+}
 .nav_links_line {
 	position: absolute;
 	width: 90%;
@@ -955,6 +952,8 @@ margin: 5px 30px 5px 0px;
 .nav_links_circle:hover {
 	background: white;
 	border: 5px solid transparent;
+	transform-origin: center center;
+	transform: scale(1.10);
 }
    .nav_links {
 	   justify-content: space-between;
@@ -970,6 +969,7 @@ margin: 5px 30px 5px 0px;
 	   height: calc(60px + 60 * ((100vw - 320px) / (1280 - 320)));
 	   position: relative;
 	   box-shadow: 0px 0px 7px #00000096;
+	   animation: none;
    }
    .gmail {
 	   display: none;
@@ -1029,7 +1029,7 @@ margin: 5px 30px 5px 0px;
 	   width: calc(48px + 48 * ((100vw - 320px) / (1280 - 320)));
 	   height: calc(45px + 40 * ((100vw - 320px) / (1280 - 320)));
 	   display: block;
-	   top: 4.2%;
+	   top: 4.5%;
 	   left: 24%;
    }
    .intro_title_upper {
@@ -1169,6 +1169,8 @@ margin: 5px 30px 5px 0px;
 	   justify-content: center;
 	   position: relative;
 	   transform-origin: top center;
+	   margin-bottom: 0px;
+	   transition: 0.7s;
 	   animation: imgrotate infinite 3s ease-in-out alternate;
    }
    .imgplace:hover {
@@ -1260,7 +1262,7 @@ margin: 5px 30px 5px 0px;
    }
    .logo {
 	   background: #000000b3;
-	   border: 4px solid white;
+	   border: 6px solid white;
 	   overflow: hidden;
 	   border-radius: 6px;
 	   box-shadow: 0px 0px 30px black;
@@ -1301,7 +1303,7 @@ margin: 5px 30px 5px 0px;
    color: black;
    position: relative;
    font-size: calc(53px + 53 * ((100vw - 320px) / (1280 - 320)));
-   padding: 15px 22px 15px 22px;
+   padding: 17px 24px 17px 24px;
    border-radius: 10px;
    box-shadow: 0px 0px 20px black;
    text-shadow: 0px 0px 1px #666, 0px 0px 1px gray;
@@ -1323,7 +1325,7 @@ margin: 5px 30px 5px 0px;
 	   align-self: center;
 	   position: relative;
 	   border-radius: 50%;
-   height: calc(95px + 95 * ((100vw - 320px) / (1280 - 320)));
+   height: calc(102px + 102 * ((100vw - 320px) / (1280 - 320)));
    z-index: 300;
    padding: 12px;
    background: black;
@@ -1353,7 +1355,7 @@ margin: 5px 30px 5px 0px;
 	height: calc(27px + 27 * ((100vw - 320px) / (1280 - 320)));;
 	bottom: 103%;
 	position: absolute;
-	right: 11.6%;
+	right: 11.8%;
 	background: white;
 	z-index: 299;
 }
@@ -1460,7 +1462,7 @@ margin: 5px 30px 5px 0px;
 	margin: 0 auto;
 	}
 	.footer_container h4 {
-		font-size: calc(28px + 28 * ((100vw - 320px) / (1280 - 320)));
+		font-size: calc(30px + 30 * ((100vw - 320px) / (1280 - 320)));
 	color: white;
 	vertical-align: center;
 	text-align: right;
@@ -1483,7 +1485,21 @@ margin: 5px 30px 5px 0px;
 	   0% { transform: scale(0.9)}
 	   100% { transform: scale(1)}
    }
-   
+   @keyframes pict_rotate {
+	0% { transform: rotate(0.0deg);}
+	6% { transform: scale(1);}
+	10% { transform: rotate(5deg) scale(1.07);}
+	14% { transform: scale(1);}
+	20% { transform: rotate(0.0deg);}
+	30% { transform: rotate(-5deg);}
+	40% { transform: rotate(0.0deg);}
+	50% { transform: rotate(10deg);}
+	60% { transform: rotate(0.0deg);}
+	70% { transform: rotate(-14deg);}
+	80% { transform: rotate(6deg);}
+	90% { transform: rotate(3deg);}
+	100% { transform: rotate(0.0deg);}
+}
 }
 
 
