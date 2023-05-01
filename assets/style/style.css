@@ -348,7 +348,7 @@ clip-path: polygon(36% 0, 100% 0, 100% 100%, 0 100%, 0 76%, 0 72%, 0 69%, 1% 67%
 .nav_links {
 	display: flex;
 	flex-direction: row;
-	max-width: 420px;
+	max-width: 320px;
 	position: relative;
 	justify-content: space-between;
 	margin: 0 auto;
