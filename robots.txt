@@ -1,0 +1,7 @@
+user-agent: *
+Allow: https://l1ashok.github.io/kotov/
+Allow: /kotov/
+
+user-agent: Googlebot
+Allow: https://l1ashok.github.io/kotov/
+Allow: /kotov/
